@@ -6,6 +6,8 @@
 
 **UX/UI design · Responsive web implementation · Conversion strategy**
 
+[![Live preview](https://img.shields.io/badge/Live_preview-Vercel-D42A2F?style=for-the-badge&logo=vercel&logoColor=white)](https://redlinemd-challenge.vercel.app/)
+
 [![View source](https://img.shields.io/badge/Explore_the_project-172B46?style=for-the-badge&logo=github&logoColor=white)](https://github.com/marcuscastrodev/redlinemd-challenge)
 [![Marcus Castro](https://img.shields.io/badge/More_projects-Marcus_Castro-D42A2F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/marcuscastrodev)
 
@@ -22,7 +24,8 @@
 | **My focus** | UX strategy, visual direction, responsive interface, interaction design |
 | **Deliverable** | Interactive landing-page concept and implementation packaged in `index.html` |
 | **Business goal** | Make the offer understandable quickly and reduce friction toward contract review |
-| **Status** | Design concept; no live A/B test or production checkout integration |
+| **Status** | Published concept preview; no live A/B test or production checkout integration |
+| **Preview URL** | [redlinemd-challenge.vercel.app](https://redlinemd-challenge.vercel.app/) (configured as repository homepage) |
 
 ## The challenge
 
@@ -103,6 +106,12 @@ The design rationale includes:
 
 These are **design and implementation intentions**, not a claim of a completed accessibility certification or third-party audit.
 
+## Preview and screenshots
+
+**[Open the Vercel preview](https://redlinemd-challenge.vercel.app/)**. This URL is configured in the GitHub repository metadata; its runtime availability has not been independently verified in this review.
+
+The next step is to capture a clean desktop hero, a mobile viewport, and the interactive sample report, then place the approved images in a `screenshots/` folder and reference them here. These assets have **not** been published yet.
+
 ## Project files and how to view
 
 This repository contains an exported, self-contained HTML presentation in [`index.html`](./index.html). It uses an embedded bundler/runtime rather than a conventional, easily editable source tree.
@@ -126,7 +135,8 @@ To review it locally:
 ## Next iteration
 
 - [ ] Add authentic desktop and mobile screenshots
-- [ ] Document and verify the public preview URL
+- [x] Document the public preview URL configured in repository settings
+- [ ] Independently validate that the Vercel preview opens and works
 - [ ] Publish an editable source version if available
 - [ ] Run cross-device and accessibility checks
 - [ ] Test hypotheses with real user and conversion data, if the product team permits
