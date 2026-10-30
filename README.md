@@ -1,75 +1,142 @@
-# RedlineMD landing page: design rationale
+<div align="center">
 
-Redesign concept for the Foundey web designer assignment. These are design hypotheses based on the brief. None of them have been tested with real traffic.
+# RedlineMD — landing page redesign
 
-## The problem
+### A conversion-focused, mobile-first design challenge
 
-- 35% of traffic is mobile, but over 90% of revenue comes from desktop. The mobile journey is losing buyers.
-- The current site lacks the polish needed to sell high-stakes legal technology to physicians.
-- Traffic arrives from Google Ads, so the page has to confirm the search intent ("physician contract review") within a few seconds.
+**UX/UI design · Responsive web implementation · Conversion strategy**
 
-## Strategy
+[![View source](https://img.shields.io/badge/Explore_the_project-172B46?style=for-the-badge&logo=github&logoColor=white)](https://github.com/marcuscastrodev/redlinemd-challenge)
+[![Marcus Castro](https://img.shields.io/badge/More_projects-Marcus_Castro-D42A2F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/marcuscastrodev)
 
-One page with one action. Every primary CTA goes to the same destination (redlinemd.ai), and the header has only two in-page links. The story moves from offer to risk to proof:
+</div>
 
-1. **Hero:** what it is, what it costs and what to do next.
-2. **Contract risks:** why it matters, in physician-specific terms and dollar amounts.
-3. **How it works:** a working demonstration of the product, followed by the final conversion block.
+> **Independent design challenge.** This is a redesign concept created for a web designer assignment, not the official RedlineMD website. The decisions below are hypotheses informed by the provided brief, **not measured conversion improvements**.
 
-## Key UX and CRO decisions
+## At a glance
 
-**Message match and price visibility**
-- The H1 and the eyebrow repeat the ad intent.
-- The $199 vs $500+ comparison sits directly above the primary CTA. The price is part of the CTA label ("Review my contract — $199"), so there's no surprise at checkout.
+| | |
+| :--- | :--- |
+| **Context** | Web designer assignment for Foundey |
+| **Challenge** | Improve clarity, trust, and the mobile purchase journey for a physician contract-review service |
+| **My focus** | UX strategy, visual direction, responsive interface, interaction design |
+| **Deliverable** | Interactive landing-page concept and implementation packaged in `index.html` |
+| **Business goal** | Make the offer understandable quickly and reduce friction toward contract review |
+| **Status** | Design concept; no live A/B test or production checkout integration |
 
-**ROI narrative**
-- A three-figure strip ($199 / $500+ / $10,000+) turns the cost-savings argument into something people can scan.
-- The $10,000+ figure is qualified ("in some contracts", "depending on your policy") to avoid an unverifiable savings promise.
+## The challenge
 
-**Show the product**
-- The sample report is interactive: choose a risk alert and see the redlined clause, why it matters and the suggested revision.
-- This builds trust through evidence instead of testimonials or badges. None were invented.
+According to the assignment brief, **35% of visits came from mobile devices while desktop accounted for over 90% of revenue**. This suggested a potential mobile conversion gap, but it did not establish its cause.
 
-**Lower upload friction**
-- The final block includes an "Add your contract" drop zone, so committing feels like one small step.
-- In this concept the file isn't transmitted. The production version should pass it to the existing checkout.
+Visitors arriving through Google Ads needed immediate answers:
 
-**Mobile-first fixes for the 35%**
-- **Above the fold:** the H1, price, primary CTA and 24-hour reassurance all appear without excessive scrolling.
-- **Sticky price bar:** a bar with $199 and "Review my contract" appears once the hero CTA scrolls away. It hides when the final pricing block is visible, so the two never duplicate.
-- **Section shortcuts:** "How it works" and "Contract risks" sit under the header as large tap targets.
-- **Sample report as a reader:** on mobile it shows one alert at a time, with chips and next/previous controls instead of a cramped three-pane view. The hero mockup also drops to the two most important clauses.
-- **Tap targets and buttons:** all tap targets are at least 44px, and buttons never wrap to two lines.
+1. What does this service do for physicians?
+2. How much does it cost, and why might it be worthwhile?
+3. What happens after I submit a contract?
+4. Can I trust the process?
 
-## Visual decisions
+The redesign focuses on answering those questions in a clear sequence, without inventing testimonials or performance claims.
 
-**Brand**
-- The original logo is kept. Its tagline was cropped because it contains a typo ("Reiew").
-- Logo red (#D42A2F) is reserved for the CTA, risk annotations and the small "redline" rule before each eyebrow.
+## The design approach
 
-**Palette**
-- Deep navy (#172B46) gives legal authority, soft blue-gray surfaces give clinical clarity, and a single warm accent keeps the page calm rather than alarming.
+```text
+Search intent
+     ↓
+Clear offer + visible price
+     ↓
+Why contract review matters
+     ↓
+Interactive sample report
+     ↓
+Single primary next step
+```
 
-**Typography**
-- Geist with tight tracking on headings, plus Geist Mono for clause numbers and interface labels, the way lawyers cite sections.
-- Everything is in sentence case.
+### 01 — Message match from the first screen
 
-**Rhythm**
-- Section backgrounds go light, then navy, then soft gray, so each step of the story feels distinct.
-- Restrained radii (8–16px), hairline borders and one soft shadow depth.
+The hero uses language aligned with the search intent, “physician contract review.” Pricing is visible near the primary CTA rather than hidden deep in the page.
 
-**No decoration without function**
-- No stock photos, 3D illustrations or gradients beyond a faint hero wash.
+### 02 — One primary conversion action
 
-## Accessibility and SEO
+The landing page prioritizes a single offer and consistent CTA destinations. The header provides only two in-page shortcuts, minimizing unnecessary navigation choices.
 
-- One H1, H2 per section and semantic `dl` / `ol` / `article` markup.
-- Visible focus rings, reduced-motion support, and text contrast at WCAG AA or better.
-- The page title, meta description and Open Graph tags follow the brief.
+### 03 — Demonstrate value instead of claiming it
 
-## Open items
+An interactive sample-report concept allows visitors to inspect contract-risk examples, redlined wording, and suggested changes. **The examples are illustrative**, not an actual legal review.
 
-- **Delivery time:** the PDF says "instant" redlining, but the approved copy says "within 24 hours". This needs confirmation.
-- **Checkout and upload:** the real URL and upload hand-off still need to be wired.
-- **Sample report content:** the clauses are illustrative. They should be replaced with a real sample report.
-- **Proof of impact:** to validate the conversion uplift, A/B test the mobile sticky bar and the price-in-CTA label first.
+### 04 — Design specifically for mobile
+
+The mobile concept includes:
+
+- An early view of the offer, price, and CTA
+- A conditional sticky price bar that avoids competing with the final conversion section
+- Large navigation and action targets, designed at 44px or more
+- A focused, one-alert-at-a-time sample-report reader
+- Simplified hero content for smaller screens
+
+### 05 — Reduce perceived upload friction
+
+The final section includes an “Add your contract” interaction as part of the concept. **No contract is uploaded or processed by this demonstration.** Real file handling and checkout are outside the delivered scope.
+
+## Visual system
+
+| Element | Direction | Rationale |
+| :--- | :--- | :--- |
+| Primary navy | `#172B46` | A restrained, professional foundation |
+| Brand red | `#D42A2F` | Reserved for CTAs and risk annotations |
+| Typography | Geist and Geist Mono | Clear hierarchy and precise interface details |
+| Layout | Alternating light and dark sections | Separate stages of the story visually |
+| UI details | Subtle borders, restrained shadows, modest radii | Avoid decoration competing with the offer |
+| Writing style | Sentence case | Readable, direct messaging |
+
+The concept retains the original brand logo while making the interface more consistent.
+
+## Accessibility and implementation considerations
+
+The design rationale includes:
+
+- Semantic section and content structure
+- Visible keyboard focus indicators
+- Reduced-motion preferences
+- Attention to text contrast
+- Mobile-friendly targets and responsive layout
+- Page title, description, and Open Graph metadata
+
+These are **design and implementation intentions**, not a claim of a completed accessibility certification or third-party audit.
+
+## Project files and how to view
+
+This repository contains an exported, self-contained HTML presentation in [`index.html`](./index.html). It uses an embedded bundler/runtime rather than a conventional, easily editable source tree.
+
+To review it locally:
+
+1. Clone or download this repository.
+2. Open `index.html` in a modern browser with JavaScript enabled.
+3. Explore the responsive experience and interactive concept.
+
+**Note:** Because the delivered file is a packaged HTML export, this repository should not be interpreted as the original component-level source code. A maintainable, unbundled source version would be a separate improvement.
+
+## What remains unvalidated
+
+- **Actual conversion impact:** requires analytics and controlled A/B testing.
+- **Delivery-time language:** the brief used conflicting “instant” and “within 24 hours” references.
+- **Checkout and upload:** need real production endpoints and privacy safeguards.
+- **Sample-report accuracy:** requires approved real-world examples.
+- **Accessibility:** needs a full manual and automated test pass across browsers and devices.
+
+## Next iteration
+
+- [ ] Add authentic desktop and mobile screenshots
+- [ ] Document and verify the public preview URL
+- [ ] Publish an editable source version if available
+- [ ] Run cross-device and accessibility checks
+- [ ] Test hypotheses with real user and conversion data, if the product team permits
+
+---
+
+<div align="center">
+
+**Designed and documented by [Marcus Castro](https://github.com/marcuscastrodev)**
+
+*Building useful digital experiences where design, engineering, and business strategy meet.*
+
+</div>
