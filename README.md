@@ -110,7 +110,33 @@ These are **design and implementation intentions**, not a claim of a completed a
 
 **[Open the Vercel preview](https://redlinemd-challenge.vercel.app/)**. This URL is configured in the GitHub repository metadata; its runtime availability has not been independently verified in this review.
 
-The next step is to capture a clean desktop hero, a mobile viewport, and the interactive sample report, then place the approved images in a `screenshots/` folder and reference them here. These assets have **not** been published yet.
+### Screenshot walkthrough
+
+#### 01 — Desktop hero
+
+The desktop landing page places the value proposition, price comparison, primary action, and product preview within the opening experience.
+
+![RedlineMD desktop landing page](screenshots/01-hero-desktop.webp)
+
+#### 02 — Mobile hero
+
+The mobile layout adapts navigation and keeps the offer, price, and calls to action prominent on a smaller screen.
+
+<img src="screenshots/02-hero-mobile.webp" alt="RedlineMD mobile landing page" width="360" />
+
+#### 03 — Contract risks
+
+An educational section explains key contract risks through concise cards, reinforcing the rationale for reviewing an agreement.
+
+![RedlineMD contract risks section](screenshots/03-contract-risks.webp)
+
+#### 04 — Interactive sample report
+
+A sample report concept pairs flagged clauses with risk levels, explanations, and illustrative suggested revisions.
+
+![RedlineMD interactive sample report](screenshots/04-sample-report.webp)
+
+*These are actual screenshots of the design concept, not evidence of production functionality, legal advice, or conversion results.*
 
 ## Project files and how to view
 
@@ -134,7 +160,7 @@ To review it locally:
 
 ## Next iteration
 
-- [ ] Add authentic desktop and mobile screenshots
+- [x] Add authentic desktop, mobile, contract-risk, and sample-report screenshots
 - [x] Document the public preview URL configured in repository settings
 - [ ] Independently validate that the Vercel preview opens and works
 - [ ] Publish an editable source version if available
